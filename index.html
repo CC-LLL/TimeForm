@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splider Image Slider</title>
+    <title>Time Forms</title>
     <link rel="stylesheet" href="splide-4.1.3/dist/css/splide.min.css">
     <script src="splide-4.1.3/dist/js/splide.min.js"></script>
     <style>
@@ -23,47 +23,8 @@
 
     <script>
         const myApp = [];
-        /*
-        function fetchJSONData(url, callback) {
-            const xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-                    //alert(this.responseText);
-                    callback(this.responseText);
-                }
-            }
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-        }
-        fetchJSONData("./SlideShow-2.json", function (jsondata) {
-            myArr = JSON.parse(jsondata);
-            //alert(myArr.length);
-            let list = document.getElementById("imglist");
-            for (i = 0; i < myArr.length; ++i) {
-                let imgsrcdiv = document.createElement('div');
-                imgsrcdiv.classList.add('splide__slide__container');
-                imgsrcdiv.innerHTML = '<img src=' + myArr[i].Image + '>';
-                let carddiv = document.createElement('div');
-                carddiv.innerHTML = '<h3>' + myArr[i].Name + ', ' + myArr[i].Year + '</h3>';
-                carddiv.innerHTML += '<p>Digital Rendering</p>' + '<p>height x width</p>' + '<p>availability</p>';
-                let hrdiv = document.createElement('hr');
-
-                let li = document.createElement('li');
-                li.classList.add('splide__slide');
-                li.appendChild(imgsrcdiv);
-                li.appendChild(hrdiv);
-                li.appendChild(carddiv);
-                list.appendChild(li);
-            }
-            //wait till all setup
-            new Splide('.splide').mount();
-
-        });
-        */
 
         function fetchJSONDataFetch() {
-            //console.log('fetchJSONData-1');
-            //alert('fetchJSONData-1');
 
             fetch('./SlideShow-2.json')
                 .then(response => {

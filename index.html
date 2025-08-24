@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splider Image Slider</title>
+    <link rel="stylesheet" href="splide-4.1.3/dist/css/splide.min.css">
+    <script src="splide-4.1.3/dist/js/splide.min.js"></script>
+    <style>
+        .splide__slide img {
+            width: 100%;
+            height: 100%;
+            /*object-fit: cover;*/
+        }
+    </style>
+</head>
+<body>
+    <section class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul id="imglist" class="splide__list"></ul>
+        </div>
+    </section>
+
+    <script>
+        const myApp = [];
+        /*
+        function fetchJSONData(url, callback) {
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                    //alert(this.responseText);
+                    callback(this.responseText);
+                }
+            }
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+        fetchJSONData("./SlideShow-2.json", function (jsondata) {
+            myArr = JSON.parse(jsondata);
+            //alert(myArr.length);
+            let list = document.getElementById("imglist");
+            for (i = 0; i < myArr.length; ++i) {
+                let imgsrcdiv = document.createElement('div');
+                imgsrcdiv.classList.add('splide__slide__container');
+                imgsrcdiv.innerHTML = '<img src=' + myArr[i].Image + '>';
+                let carddiv = document.createElement('div');
+                carddiv.innerHTML = '<h3>' + myArr[i].Name + ', ' + myArr[i].Year + '</h3>';
+                carddiv.innerHTML += '<p>Digital Rendering</p>' + '<p>height x width</p>' + '<p>availability</p>';
+                let hrdiv = document.createElement('hr');
+
+                let li = document.createElement('li');
+                li.classList.add('splide__slide');
+                li.appendChild(imgsrcdiv);
+                li.appendChild(hrdiv);
+                li.appendChild(carddiv);
+                list.appendChild(li);
+            }
+            //wait till all setup
+            new Splide('.splide').mount();
+
+        });
+        */
+
+        function fetchJSONDataFetch() {
+            //console.log('fetchJSONData-1');
+            //alert('fetchJSONData-1');
+
+            fetch('./SlideShow-2.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();  //parsed info is in data; if data is array, it is then in array format.
+                })
+                .then(data => {
+                    //console.log(data)
+                    //alert(data);
+                    myArr = data;
+                    //alert(myArr.length);
+                    let list = document.getElementById("imglist");
+                    for (i = 0; i < myArr.length; ++i) {
+                        let imgsrcdiv = document.createElement('div');
+                        imgsrcdiv.classList.add('splide__slide__container');
+                        imgsrcdiv.innerHTML = '<img src=' + myArr[i].Image + '>';
+                        let carddiv = document.createElement('div');
+                        carddiv.innerHTML = '<h3>' + myArr[i].Name + ', ' + myArr[i].Year + '</h3>';
+                        carddiv.innerHTML += '<p>Digital Rendering</p>' + '<p>Height x Width: flexible</p>';
+                        carddiv.innerHTML += '<p>ID: [' + myArr[i].ID + '] ( ' + myArr[i].TabMode + ' )</p>';
+                        let hrdiv = document.createElement('hr');
+
+                        let li = document.createElement('li');
+                        li.classList.add('splide__slide');
+                        li.appendChild(imgsrcdiv);
+                        li.appendChild(carddiv);
+                        li.appendChild(hrdiv);
+                        list.appendChild(li);
+                    }
+                    //wait till all setup
+                    new Splide('.splide', {
+                        //type: 'loop',
+                        direction: 'ttb', // Set direction to top-to-bottom for vertical scrolling
+                        //height: '400px', // Define a fixed height for the carousel
+                        // Or, use heightRatio for a responsive height based on the width
+                        //heightRatio: 1.0,
+                        height: '100%',
+                        //perPage: 1, // Display one slide at a time
+                        //autoHeight: true,
+                        arrows: false,
+                        paginationDirection: 'ttb', // Ensure vertical pagination if desired
+                        autoScroll: {
+                            speed: 2,
+                        },
+                    }).mount();
+                })
+                .catch(error => console.error('Failed to fetch data:', error));
+        }
+        fetchJSONDataFetch();
+
+    </script>
+
+</body>
+</html>

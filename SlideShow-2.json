@@ -1,0 +1,83 @@
+[
+    {
+        "Name": "Field Spread (11:38)",
+        "Image": "images/ss2-T2m8-001.jpg",
+        "TabMode": "II-T2m8",
+        "Description": "Binary base",
+        "Year": "6/2024",
+        "ID": "410"
+    },
+    {
+        "Name": "Bar Digit (6:15)",
+        "Image": "images/ss2-T1m4-001.jpg",
+        "TabMode": "II-T1m4",
+        "Description": "Counts in digits",
+        "Year": "9/2024",
+        "ID": "441"
+    },
+    {
+        "Name": "Fan out planes in circle (9:55)",
+        "Image": "images/ss2-T3m5s2-001.jpg",
+        "TabMode": "II-T3m5s2",
+        "Description": "Binary base",
+        "Year": "8/2025",
+        "ID": "547"
+    },
+    {
+        "Name": "Two way trains (11:24)",
+        "Image": "images/ss2-T1m4s1-001.jpg",
+        "TabMode": "II-T1m4s1",
+        "Description": "Position, Weighted",
+        "Year": "8/2025",
+        "ID": "551"
+    },
+    {
+        "Name": "Double Indent (12:10)",
+        "Image": "images/ss-T1m1-001.jpg",
+        "TabMode": "II-T1m1s0",
+        "Description": "Directional Clock Face",
+        "Year": "7/2024",
+        "ID": "419"
+    },
+    {
+        "Name": "Side out (9:01)",
+        "Image": "images/ss-T2m0s3-001.jpg",
+        "TabMode": "II-T2m0s3",
+        "Description": "Binary base",
+        "Year": "8/2024",
+        "ID": "437"
+    },
+    {
+        "Name": "Big Wave (9:12)",
+        "Image": "images/ss-T3m4-001.jpg",
+        "TabMode": "II-T3m4s0",
+        "Description": "Binary base",
+        "Year": "11/2024",
+        "ID": "457"
+    },
+    {
+        "Name": "Rain Drop (11:27)",
+        "Image": "images/ss-T3m4-002.jpg",
+        "TabMode": "I-T3m4",
+        "Description": "Position",
+        "Year": "9/2020",
+        "ID": "151"
+    },
+    {
+        "Name": "Mona Lisa (7:35)",
+        "Image": "images/ss-T7m1-001.jpg",
+        "TabMode": "I-T7m1s0",
+        "Description": "Position",
+        "Year": "10/2020",
+        "ID": "27"
+    },
+    {
+        "Name": "Blob Strip Pool (9:00)",
+        "Image": "images/ss-T7m6-001.jpg",
+        "TabMode": "I-T7m6s0",
+        "Description": "Clock face",
+        "Year": "11/2023",
+        "ID": "357"
+    }
+
+]
